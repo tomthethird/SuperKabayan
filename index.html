@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super Kabayan | Dashboard</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="emergencySavingsFund.js"></script>
+</head>
+
+<body>
+<header class="p-4 sticky-top">
+<div class="d-flex flex-wrap align-items-center justify-content-between justify-content-lg-between">
+
+  <a href="index.html" class="d-flex align-items-center">
+    <img class="bi" aria-label="logo" src="sources/sk-logo.png">
+  </a>
+
+  <div class="d-flex align-items-center">
+    <div class="px-4 text-end">
+      <span class="fw-semibold">TOMAS III LOPEZ</span><br>
+      <span class="fw-normal">Macau SAR, China</span>
+    </div>
+
+    <div class="dropdown text-end">
+      <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+      </a>
+      <ul class="dropdown-menu text-small">
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><a class="dropdown-item" href="#">Settings</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Sign out</a></li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+</header>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+    <div class="position-sticky pt-3 sidebar-sticky">
+      <ul class="nav flex-column mx-3">
+        <li class="nav-item">
+            <a class="btn-single d-inline-flex text-decoration-none rounded" href="index.html">Dashboard</a>
+        </li>
+        <li class="border-top my-2"></li>
+        <li class="nav-item">
+            <a class="btn-single d-inline-flex text-decoration-none rounded" href="savings.html">Savings</a>
+        </li>
+        <li class="border-top my-2"></li>
+        <li>
+            <h6 class="form-text">Upcoming Features</h6>
+        </li>
+        <li class="nav-item">
+            <a class="btn-single d-inline-flex text-decoration-none rounded" href="budget.html">Budget</a>
+        </li>
+        <li class="nav-item">
+            <a class="btn-single d-inline-flex text-decoration-none rounded" href="contributions.html">Contributions</a>
+        </li>
+        <li class="nav-item">
+            <a class="btn-single d-inline-flex text-decoration-none rounded" href="masterClass.html">Masterclass</a>
+        </li>
+        <li class="nav-item">
+            <a class="btn-single d-inline-flex text-decoration-none rounded" href="hotlines.html">Hotlines</a>
+        </li>
+        <li class="border-top my-2"></li>
+        <li class="nav-item">
+          <button class="btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+          Account
+          </button>
+          <div class="collapse" id="account-collapse">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">New...</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Profile</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Settings</a></li>
+              <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Sign out</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+    </nav>
+        
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 pb-4 mb-3 border-bottom">
+          <div class="container" id="mainContainer">
+            <div class="row g-4">
+
+              <div class="col-md-6 col-lg-4 col-xl-3  flex-wrap position-relative">
+                <div class="p-3 snip-card rounded-4" id="emergencyFContainer">
+                  <a href="savings.html" class="d-inline-flex text-decoration-none stretched-link"><h3 class="fw-bold mb-0">EMERGENCY</h3></a>
+                  <h5 class="fw-bold mb-1">FUND</h5><br>
+                  <div class="d-flex fw-normal justify-content-between">
+                    <h6>GOAL</h6>
+                    <h6 id="efTarget"></h6><br>
+                    <h6 id="efGoal"></h6>
+                  </div>
+                  <h1 class="fw-bold text-end" id="efPercent"></h1>
+                  <h6 class="text-end" id="efDeposit"></h6>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4 col-xl-3 position-relative">
+                <div class="p-3 snip-card rounded-4" id="savingsContainer">
+                  <a href="savings.html" class="d-inline-flex text-decoration-none stretched-link"><h3 class="fw-bold mb-0">SAVINGS</h3></a>
+                  <h6 id="savings1Name"></h6><br>
+                  <div class="d-flex fw-normal justify-content-between">
+                    <h6>GOAL</h6>
+                    <h6 id="savings1Goal"></h6>
+                  </div>
+                  <h1 class="fw-bold text-end" id="savings1Percent"></h1>
+                  <h6 class="text-end" id="savings1Deposit"></h6>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-4 col-xl-3 position-relative">
+                <div class="p-3 snip-card rounded-4 flex-wrap" id="budgetContainer">
+                  <a href="budget.html" class="d-inline-flex text-decoration-none stretched-link"><h3 class="fw-bold mb-0">BUDGET</h3></a>
+                  <h6 id="currentMonth">July 2022</h6><br>
+                  <h6 id="currency">MOP$</h6>
+                  <h1 class="fw-bold text-end" id="budgetAmount">14,526</h1>
+                  <h6 class="text-end">remaining</h6>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-2 pb-4 mb-3 border-bottom">
+          <div class="container" id="main2Container">
+            <div class="row g-4">
+
+              <div class="col-md-6 col-lg-4 col-xl-3 position-relative">
+                <div class="p-3 snip-card rounded-4" id="philHealth">
+                  <a href="contributions.html" class="d-inline-flex text-decoration-none stretched-link"><h3 class="fw-bold mb-0">PHILHEALTH</h3></a>
+                  <h6 id="phpayment">Quarterly</h6><br>
+                  <div class="d-flex fw-normal justify-content-between align-items-center">
+                    <h5>DUE</h5>
+                    <h4 class="fw-bold text-end" id="phAmount">9,600</h4>
+                  </div><br>
+                  <h6 id="phCountdown">Next Payment Due:</h6>
+                  <h6 id="phDueDate">October 2022</h6>
+                </div>
+              </div>
+            
+              <div class="col-md-6 col-lg-4 col-xl-3 position-relative">
+                <div class="p-3 snip-card rounded-4" id="sss">
+                  <a href="contributions.html" class="d-inline-flex text-decoration-none stretched-link"><h3 class="fw-bold mb-0">SSS</h3></a>
+                  <h6 id="ssspayment">Monthly</h6><br>
+                  <div class="d-flex fw-normal justify-content-between align-items-center">
+                    <h5>DUE</h5>
+                    <h4 class="fw-bold text-end" id="sssAmount">9,600</h4>
+                  </div><br>
+                  <h6 id="sssCountdown">Next Payment Due:</h6>
+                  <h6 id="sssDueDate">October 2022</h6>
+                </div> 
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+</div>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>
